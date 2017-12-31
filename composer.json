@@ -1,7 +1,7 @@
 {
     "name": "endroid/tile-bundle",
     "description": "Endroid Tile Bundle",
-    "keywords": ["endroid", "delft", "blue", "tile", "symfony", "bundle"],
+    "keywords": ["endroid", "delft", "blue", "tile", "symfony", "bundle", "php"],
     "homepage": "https://github.com/endroid/tile-bundle",
     "type": "symfony-bundle",
     "license": "MIT",
@@ -13,6 +13,7 @@
         }
     ],
     "require": {
+        "php": ">=7.1",
         "endroid/tile": "^2.0"
     },
     "require-dev": {

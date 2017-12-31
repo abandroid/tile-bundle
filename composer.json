@@ -2,7 +2,7 @@
     "name": "endroid/tile-bundle",
     "description": "Endroid Tile Bundle",
     "keywords": ["endroid", "delft", "blue", "tile", "symfony", "bundle"],
-    "homepage": "https://github.com/endroid/EndroidTileBundle",
+    "homepage": "https://github.com/endroid/tile-bundle",
     "type": "symfony-bundle",
     "license": "MIT",
     "authors": [

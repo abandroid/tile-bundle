@@ -1,0 +1,36 @@
+{
+    "name": "endroid/tile-bundle",
+    "description": "Endroid Tile Bundle",
+    "keywords": ["endroid", "delft", "blue", "tile", "symfony", "bundle"],
+    "homepage": "https://github.com/endroid/EndroidTileBundle",
+    "type": "symfony-bundle",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "Jeroen van den Enden",
+            "email": "info@endroid.nl",
+            "homepage": "https://endroid.nl/"
+        }
+    ],
+    "require": {
+        "endroid/tile": "^2.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^5.7|^6.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "Endroid\\TileBundle\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Endroid\\TileBundle\\Tests\\": "tests/"
+        }
+    },
+    "extra": {
+        "branch-alias": {
+            "dev-master": "1.x-dev"
+        }
+    }
+}

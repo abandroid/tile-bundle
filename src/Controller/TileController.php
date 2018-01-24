@@ -20,14 +20,14 @@ use Endroid\Tile\Tile;
 class TileController extends Controller
 {
     /**
-     * @Route("/{text}.{extension}", name="endroid_tile", requirements={"extension"="jpg|png|gif"})
+     * @Route("/{text}.{extension}", name="tile", requirements={"extension"="jpg|png|gif"})
      */
     public function generateAction($text, $extension)
     {
         if (false !== strpos($text, ' ')) {
             $text = str_replace(' ', '_', $text);
 
-            return $this->redirect($this->generateUrl('endroid_tile', [
+            return $this->redirect($this->generateUrl('tile', [
                 'text' => $text,
                 'extension' => $extension,
             ]));

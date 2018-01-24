@@ -50,7 +50,7 @@ class TileExtension extends Twig_Extension implements ContainerAwareInterface
     public function tileUrlFunction($text, $extension = 'png')
     {
         $router = $this->container->get('router');
-        $url = $router->generate('endroid_tile', [
+        $url = $router->generate('tile', [
             'text' => $text,
             'extension' => $extension,
         ]);

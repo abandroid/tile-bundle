@@ -1,6 +1,5 @@
 services:
-    endroid.tile.twig.extension:
-        class: Endroid\TileBundle\Twig\Extension\TileExtension
+    Endroid\Tile\Twig\Extension\TileExtension:
         tags:
             - { name: twig.extension }
         calls:

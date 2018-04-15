@@ -9,26 +9,29 @@
 
 namespace Endroid\TileBundle\Controller;
 
-use Sensio\Bundle\FrameworkExtraBundle\Configuration\Route;
-use Symfony\Bundle\FrameworkBundle\Controller\Controller;
+use Symfony\Component\HttpFoundation\RedirectResponse;
+use Symfony\Component\Routing\Annotation\Route;
 use Symfony\Component\HttpFoundation\Response;
 use Endroid\Tile\Tile;
+use Symfony\Component\Routing\RouterInterface;
 
-/**
- * Tile controller.
- */
-class TileController extends Controller
+final class GenerateController
 {
+    private $router;
+
+    public function __construct(RouterInterface $router)
+    {
+        $this->router = $router;
+    }
+
     /**
      * @Route("/{text}.{extension}", name="tile", requirements={"extension"="jpg|png|gif"})
      */
-    public function generateAction($text, $extension)
+    public function generateAction(string $text, string $extension): Response
     {
         if (false !== strpos($text, ' ')) {
-            $text = str_replace(' ', '_', $text);
-
-            return $this->redirect($this->generateUrl('tile', [
-                'text' => $text,
+            return new RedirectResponse($this->router->generate('tile', [
+                'text' => str_replace(' ', '_', $text),
                 'extension' => $extension,
             ]));
         }

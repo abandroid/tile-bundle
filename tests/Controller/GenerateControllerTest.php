@@ -7,7 +7,7 @@
  * with this source code in the file LICENSE.
  */
 
-namespace Endroid\QrCodeBundle\Tests;
+namespace Endroid\TileBundle\Tests;
 
 use Endroid\BundleTest\BundleTestCase;
 
@@ -16,8 +16,8 @@ class GenerateControllerTest extends BundleTestCase
     public function testGenerateController()
     {
         $client = static::createClient();
-        $client->request('GET', '/qr-code/qr-code.png');
-        $this->assertEquals(200, $client->getResponse()->getStatusCode());
+        $client->request('GET', '/tile/tile.png');
+        $this->assertEquals(2200, $client->getResponse()->getStatusCode());
         $this->assertSame('image/png', $client->getResponse()->headers->get('Content-Type'));
     }
 }

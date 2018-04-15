@@ -13,7 +13,7 @@
     ],
     "require": {
         "php": ">=7.1",
-        "endroid/tile": "^2.0"
+        "endroid/tile": "^2.0.1"
     },
     "require-dev": {
         "endroid/bundle-test": "dev-master"

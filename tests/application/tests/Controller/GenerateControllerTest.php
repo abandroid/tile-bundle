@@ -19,7 +19,7 @@ class GenerateControllerTest extends WebTestCase
     {
         $client = static::createClient();
         $client->request('GET', '/tile/tile.png');
-        $this->assertEquals(2200, $client->getResponse()->getStatusCode());
+        $this->assertEquals(200, $client->getResponse()->getStatusCode());
         $this->assertSame('image/png', $client->getResponse()->headers->get('Content-Type'));
     }
 }

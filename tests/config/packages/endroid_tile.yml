@@ -1,6 +1,0 @@
-services:
-    Endroid\Tile\Twig\Extension\TileExtension:
-        tags:
-            - { name: twig.extension }
-        calls:
-            - [ setContainer, [ '@service_container' ] ]
